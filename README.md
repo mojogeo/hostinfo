@@ -2,8 +2,6 @@
 
 Provides REST interface for host information (using cpprestsdk on RHEL7/CentOS7). This project was created as kind of a baseiline example for setting up other REST APIs I'm considering using Microsoft's Casablanca (cpprestsdk) for. The project has been built/tested on RHEL7 and CentOS7 (the target environment for other projects I'm using cpprestsdk for) 
 
-POC: Chris Juszak
-
 --------------------------------------------------------------------------------
 # Development environment notes
 
@@ -87,7 +85,7 @@ git clone https://github.com/Microsoft/cpprestsdk.git
 cd cpprestsdk
 git reset --hard v2.10.7
 git submodule update --init
-mkdir Release/build.release
+mkdir -p Release/build.release
 cd Release/build.release
 CC=gcc CXX=g++ cmake3 .. -DCMAKE_BUILD_TYPE=Release -DWERROR=OFF \
   -DBUILD_TESTS=OFF -DBUILD_SAMPLES=OFF -DBUILD_SHARED_LIBS=OFF
